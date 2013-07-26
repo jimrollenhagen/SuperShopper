@@ -127,7 +127,7 @@
     }
     
     if (storesTbl && !dbRecord) {
-        DBRecord *dbRecord = [storesTbl insert:@{ @"name": name }];
+        dbRecord = [storesTbl insert:@{ @"name": name }];
         [dbStore sync:nil];
     }
     ShopperStore *store = [[ShopperStore alloc] initWithName: name dbRecord: dbRecord];
