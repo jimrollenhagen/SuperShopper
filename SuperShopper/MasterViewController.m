@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Jim Rollenhagen. All rights reserved.
 //
 
+#import <Dropbox/Dropbox.h>
 #import "MasterViewController.h"
 #import "DetailViewController.h"
 #import "NewStoreAlertViewDelegate.h"
@@ -34,8 +35,18 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
+    NSMutableArray *rightButtons = [[NSMutableArray alloc] init];
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(requestStoreName:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+    [rightButtons addObject:addButton];
+    
+    // only show dropbox button if account is not yet linked
+    DBAccount *account = [[DBAccountManager sharedManager] linkedAccount];
+    if (!account) {
+        UIBarButtonItem *dbButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(setUpDropbox:)];
+        [rightButtons addObject:dbButton];
+    }
+
+    self.navigationItem.rightBarButtonItems = rightButtons;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 }
 
@@ -47,6 +58,16 @@
 
 - (NewStoreAlertViewDelegate*)getDelegate {
     return [[NewStoreAlertViewDelegate alloc] initWithSender:self];
+}
+
+- (void)setUpDropbox:(id)sender {
+    // sets up dropbox auth
+    DBAccount *account = [[DBAccountManager sharedManager] linkedAccount];
+    if (account) {
+        NSLog(@"App already linked");
+    } else {
+        [[DBAccountManager sharedManager] linkFromController:self];
+    }
 }
 
 - (void)requestStoreName:(id)sender {

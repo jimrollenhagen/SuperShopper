@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		386A085E17A29A5400C12D03 /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386A085D17A29A5400C12D03 /* Dropbox.framework */; };
+		386A086017A29AA100C12D03 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386A085F17A29AA100C12D03 /* CFNetwork.framework */; };
+		386A086217A29AA700C12D03 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386A086117A29AA700C12D03 /* Security.framework */; };
+		386A086417A29AB400C12D03 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386A086317A29AB400C12D03 /* SystemConfiguration.framework */; };
+		386A086617A29AB900C12D03 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386A086517A29AB900C12D03 /* QuartzCore.framework */; };
+		386A086817A29AC700C12D03 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 386A086717A29AC700C12D03 /* libc++.dylib */; };
+		386A086C17A2A71600C12D03 /* DropboxKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 386A086B17A2A71600C12D03 /* DropboxKeys.m */; };
+		386A086F17A2A81A00C12D03 /* DropboxKeysTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 386A086E17A2A81A00C12D03 /* DropboxKeysTemplate.m */; };
 		3877D59C17A1B8A1005EE5F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3877D59B17A1B8A1005EE5F9 /* UIKit.framework */; };
 		3877D59E17A1B8A1005EE5F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3877D59D17A1B8A1005EE5F9 /* Foundation.framework */; };
 		3877D5A017A1B8A1005EE5F9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3877D59F17A1B8A1005EE5F9 /* CoreGraphics.framework */; };
@@ -40,6 +48,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		386A085D17A29A5400C12D03 /* Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Dropbox.framework; sourceTree = "<group>"; };
+		386A085F17A29AA100C12D03 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		386A086117A29AA700C12D03 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		386A086317A29AB400C12D03 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		386A086517A29AB900C12D03 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		386A086717A29AC700C12D03 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		386A086A17A2A71600C12D03 /* DropboxKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropboxKeys.h; sourceTree = "<group>"; };
+		386A086B17A2A71600C12D03 /* DropboxKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxKeys.m; sourceTree = "<group>"; };
+		386A086E17A2A81A00C12D03 /* DropboxKeysTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxKeysTemplate.m; sourceTree = "<group>"; };
 		3877D59817A1B8A1005EE5F9 /* SuperShopper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperShopper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3877D59B17A1B8A1005EE5F9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3877D59D17A1B8A1005EE5F9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -76,9 +93,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				386A086817A29AC700C12D03 /* libc++.dylib in Frameworks */,
+				386A086617A29AB900C12D03 /* QuartzCore.framework in Frameworks */,
+				386A086417A29AB400C12D03 /* SystemConfiguration.framework in Frameworks */,
+				386A086217A29AA700C12D03 /* Security.framework in Frameworks */,
+				386A086017A29AA100C12D03 /* CFNetwork.framework in Frameworks */,
 				3877D59C17A1B8A1005EE5F9 /* UIKit.framework in Frameworks */,
 				3877D59E17A1B8A1005EE5F9 /* Foundation.framework in Frameworks */,
 				3877D5A017A1B8A1005EE5F9 /* CoreGraphics.framework in Frameworks */,
+				386A085E17A29A5400C12D03 /* Dropbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +121,11 @@
 		3877D58F17A1B8A1005EE5F9 = {
 			isa = PBXGroup;
 			children = (
+				386A086717A29AC700C12D03 /* libc++.dylib */,
+				386A086517A29AB900C12D03 /* QuartzCore.framework */,
+				386A086317A29AB400C12D03 /* SystemConfiguration.framework */,
+				386A086117A29AA700C12D03 /* Security.framework */,
+				386A085F17A29AA100C12D03 /* CFNetwork.framework */,
 				3877D5A117A1B8A1005EE5F9 /* SuperShopper */,
 				3877D5CB17A1B8A2005EE5F9 /* SuperShopperTests */,
 				3877D59A17A1B8A1005EE5F9 /* Frameworks */,
@@ -128,6 +156,7 @@
 		3877D5A117A1B8A1005EE5F9 /* SuperShopper */ = {
 			isa = PBXGroup;
 			children = (
+				386A085D17A29A5400C12D03 /* Dropbox.framework */,
 				3877D5AA17A1B8A1005EE5F9 /* AppDelegate.h */,
 				3877D5AB17A1B8A1005EE5F9 /* AppDelegate.m */,
 				3877D5B317A1B8A1005EE5F9 /* MainStoryboard_iPhone.storyboard */,
@@ -141,6 +170,9 @@
 				3877D5A217A1B8A1005EE5F9 /* Supporting Files */,
 				3877D5DC17A1B9D8005EE5F9 /* ShopperStore.h */,
 				3877D5DD17A1B9D8005EE5F9 /* ShopperStore.m */,
+				386A086A17A2A71600C12D03 /* DropboxKeys.h */,
+				386A086B17A2A71600C12D03 /* DropboxKeys.m */,
+				386A086E17A2A81A00C12D03 /* DropboxKeysTemplate.m */,
 			);
 			path = SuperShopper;
 			sourceTree = "<group>";
@@ -295,6 +327,8 @@
 				3877D5BE17A1B8A1005EE5F9 /* DetailViewController.m in Sources */,
 				3877D5DE17A1B9D8005EE5F9 /* ShopperStore.m in Sources */,
 				38A6D34F17A1D2AF00D7C59D /* NewStoreAlertViewDelegate.m in Sources */,
+				386A086C17A2A71600C12D03 /* DropboxKeys.m in Sources */,
+				386A086F17A2A81A00C12D03 /* DropboxKeysTemplate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +447,10 @@
 		3877D5D717A1B8A2005EE5F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/SuperShopper\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SuperShopper/SuperShopper-Prefix.pch";
 				INFOPLIST_FILE = "SuperShopper/SuperShopper-Info.plist";
@@ -424,6 +462,10 @@
 		3877D5D817A1B8A2005EE5F9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/SuperShopper\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SuperShopper/SuperShopper-Prefix.pch";
 				INFOPLIST_FILE = "SuperShopper/SuperShopper-Info.plist";
