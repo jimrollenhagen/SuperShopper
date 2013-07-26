@@ -1,0 +1,502 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3877D59C17A1B8A1005EE5F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3877D59B17A1B8A1005EE5F9 /* UIKit.framework */; };
+		3877D59E17A1B8A1005EE5F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3877D59D17A1B8A1005EE5F9 /* Foundation.framework */; };
+		3877D5A017A1B8A1005EE5F9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3877D59F17A1B8A1005EE5F9 /* CoreGraphics.framework */; };
+		3877D5A617A1B8A1005EE5F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3877D5A417A1B8A1005EE5F9 /* InfoPlist.strings */; };
+		3877D5A817A1B8A1005EE5F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3877D5A717A1B8A1005EE5F9 /* main.m */; };
+		3877D5AC17A1B8A1005EE5F9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3877D5AB17A1B8A1005EE5F9 /* AppDelegate.m */; };
+		3877D5AE17A1B8A1005EE5F9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3877D5AD17A1B8A1005EE5F9 /* Default.png */; };
+		3877D5B017A1B8A1005EE5F9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3877D5AF17A1B8A1005EE5F9 /* Default@2x.png */; };
+		3877D5B217A1B8A1005EE5F9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3877D5B117A1B8A1005EE5F9 /* Default-568h@2x.png */; };
+		3877D5B517A1B8A1005EE5F9 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3877D5B317A1B8A1005EE5F9 /* MainStoryboard_iPhone.storyboard */; };
+		3877D5B817A1B8A1005EE5F9 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3877D5B617A1B8A1005EE5F9 /* MainStoryboard_iPad.storyboard */; };
+		3877D5BB17A1B8A1005EE5F9 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3877D5BA17A1B8A1005EE5F9 /* MasterViewController.m */; };
+		3877D5BE17A1B8A1005EE5F9 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3877D5BD17A1B8A1005EE5F9 /* DetailViewController.m */; };
+		3877D5C617A1B8A2005EE5F9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3877D5C517A1B8A2005EE5F9 /* SenTestingKit.framework */; };
+		3877D5C717A1B8A2005EE5F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3877D59B17A1B8A1005EE5F9 /* UIKit.framework */; };
+		3877D5C817A1B8A2005EE5F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3877D59D17A1B8A1005EE5F9 /* Foundation.framework */; };
+		3877D5D017A1B8A2005EE5F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3877D5CE17A1B8A2005EE5F9 /* InfoPlist.strings */; };
+		3877D5D317A1B8A2005EE5F9 /* SuperShopperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3877D5D217A1B8A2005EE5F9 /* SuperShopperTests.m */; };
+		3877D5DE17A1B9D8005EE5F9 /* ShopperStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3877D5DD17A1B9D8005EE5F9 /* ShopperStore.m */; };
+		38A6D34F17A1D2AF00D7C59D /* NewStoreAlertViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A6D34E17A1D2AF00D7C59D /* NewStoreAlertViewDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3877D5C917A1B8A2005EE5F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3877D59017A1B8A1005EE5F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3877D59717A1B8A1005EE5F9;
+			remoteInfo = SuperShopper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3877D59817A1B8A1005EE5F9 /* SuperShopper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperShopper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3877D59B17A1B8A1005EE5F9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3877D59D17A1B8A1005EE5F9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3877D59F17A1B8A1005EE5F9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3877D5A317A1B8A1005EE5F9 /* SuperShopper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SuperShopper-Info.plist"; sourceTree = "<group>"; };
+		3877D5A517A1B8A1005EE5F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3877D5A717A1B8A1005EE5F9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3877D5A917A1B8A1005EE5F9 /* SuperShopper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SuperShopper-Prefix.pch"; sourceTree = "<group>"; };
+		3877D5AA17A1B8A1005EE5F9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3877D5AB17A1B8A1005EE5F9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3877D5AD17A1B8A1005EE5F9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		3877D5AF17A1B8A1005EE5F9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		3877D5B117A1B8A1005EE5F9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		3877D5B417A1B8A1005EE5F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		3877D5B717A1B8A1005EE5F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		3877D5B917A1B8A1005EE5F9 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		3877D5BA17A1B8A1005EE5F9 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		3877D5BC17A1B8A1005EE5F9 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		3877D5BD17A1B8A1005EE5F9 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		3877D5C417A1B8A2005EE5F9 /* SuperShopperTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperShopperTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3877D5C517A1B8A2005EE5F9 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		3877D5CD17A1B8A2005EE5F9 /* SuperShopperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SuperShopperTests-Info.plist"; sourceTree = "<group>"; };
+		3877D5CF17A1B8A2005EE5F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3877D5D117A1B8A2005EE5F9 /* SuperShopperTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperShopperTests.h; sourceTree = "<group>"; };
+		3877D5D217A1B8A2005EE5F9 /* SuperShopperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuperShopperTests.m; sourceTree = "<group>"; };
+		3877D5DC17A1B9D8005EE5F9 /* ShopperStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopperStore.h; sourceTree = "<group>"; };
+		3877D5DD17A1B9D8005EE5F9 /* ShopperStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopperStore.m; sourceTree = "<group>"; };
+		38A6D34D17A1D2AF00D7C59D /* NewStoreAlertViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewStoreAlertViewDelegate.h; sourceTree = "<group>"; };
+		38A6D34E17A1D2AF00D7C59D /* NewStoreAlertViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewStoreAlertViewDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3877D59517A1B8A1005EE5F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3877D59C17A1B8A1005EE5F9 /* UIKit.framework in Frameworks */,
+				3877D59E17A1B8A1005EE5F9 /* Foundation.framework in Frameworks */,
+				3877D5A017A1B8A1005EE5F9 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3877D5C017A1B8A2005EE5F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3877D5C617A1B8A2005EE5F9 /* SenTestingKit.framework in Frameworks */,
+				3877D5C717A1B8A2005EE5F9 /* UIKit.framework in Frameworks */,
+				3877D5C817A1B8A2005EE5F9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3877D58F17A1B8A1005EE5F9 = {
+			isa = PBXGroup;
+			children = (
+				3877D5A117A1B8A1005EE5F9 /* SuperShopper */,
+				3877D5CB17A1B8A2005EE5F9 /* SuperShopperTests */,
+				3877D59A17A1B8A1005EE5F9 /* Frameworks */,
+				3877D59917A1B8A1005EE5F9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3877D59917A1B8A1005EE5F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3877D59817A1B8A1005EE5F9 /* SuperShopper.app */,
+				3877D5C417A1B8A2005EE5F9 /* SuperShopperTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3877D59A17A1B8A1005EE5F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3877D59B17A1B8A1005EE5F9 /* UIKit.framework */,
+				3877D59D17A1B8A1005EE5F9 /* Foundation.framework */,
+				3877D59F17A1B8A1005EE5F9 /* CoreGraphics.framework */,
+				3877D5C517A1B8A2005EE5F9 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3877D5A117A1B8A1005EE5F9 /* SuperShopper */ = {
+			isa = PBXGroup;
+			children = (
+				3877D5AA17A1B8A1005EE5F9 /* AppDelegate.h */,
+				3877D5AB17A1B8A1005EE5F9 /* AppDelegate.m */,
+				3877D5B317A1B8A1005EE5F9 /* MainStoryboard_iPhone.storyboard */,
+				3877D5B617A1B8A1005EE5F9 /* MainStoryboard_iPad.storyboard */,
+				3877D5B917A1B8A1005EE5F9 /* MasterViewController.h */,
+				3877D5BA17A1B8A1005EE5F9 /* MasterViewController.m */,
+				38A6D34D17A1D2AF00D7C59D /* NewStoreAlertViewDelegate.h */,
+				38A6D34E17A1D2AF00D7C59D /* NewStoreAlertViewDelegate.m */,
+				3877D5BC17A1B8A1005EE5F9 /* DetailViewController.h */,
+				3877D5BD17A1B8A1005EE5F9 /* DetailViewController.m */,
+				3877D5A217A1B8A1005EE5F9 /* Supporting Files */,
+				3877D5DC17A1B9D8005EE5F9 /* ShopperStore.h */,
+				3877D5DD17A1B9D8005EE5F9 /* ShopperStore.m */,
+			);
+			path = SuperShopper;
+			sourceTree = "<group>";
+		};
+		3877D5A217A1B8A1005EE5F9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3877D5A317A1B8A1005EE5F9 /* SuperShopper-Info.plist */,
+				3877D5A417A1B8A1005EE5F9 /* InfoPlist.strings */,
+				3877D5A717A1B8A1005EE5F9 /* main.m */,
+				3877D5A917A1B8A1005EE5F9 /* SuperShopper-Prefix.pch */,
+				3877D5AD17A1B8A1005EE5F9 /* Default.png */,
+				3877D5AF17A1B8A1005EE5F9 /* Default@2x.png */,
+				3877D5B117A1B8A1005EE5F9 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3877D5CB17A1B8A2005EE5F9 /* SuperShopperTests */ = {
+			isa = PBXGroup;
+			children = (
+				3877D5D117A1B8A2005EE5F9 /* SuperShopperTests.h */,
+				3877D5D217A1B8A2005EE5F9 /* SuperShopperTests.m */,
+				3877D5CC17A1B8A2005EE5F9 /* Supporting Files */,
+			);
+			path = SuperShopperTests;
+			sourceTree = "<group>";
+		};
+		3877D5CC17A1B8A2005EE5F9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3877D5CD17A1B8A2005EE5F9 /* SuperShopperTests-Info.plist */,
+				3877D5CE17A1B8A2005EE5F9 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3877D59717A1B8A1005EE5F9 /* SuperShopper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3877D5D617A1B8A2005EE5F9 /* Build configuration list for PBXNativeTarget "SuperShopper" */;
+			buildPhases = (
+				3877D59417A1B8A1005EE5F9 /* Sources */,
+				3877D59517A1B8A1005EE5F9 /* Frameworks */,
+				3877D59617A1B8A1005EE5F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SuperShopper;
+			productName = SuperShopper;
+			productReference = 3877D59817A1B8A1005EE5F9 /* SuperShopper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3877D5C317A1B8A2005EE5F9 /* SuperShopperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3877D5D917A1B8A2005EE5F9 /* Build configuration list for PBXNativeTarget "SuperShopperTests" */;
+			buildPhases = (
+				3877D5BF17A1B8A2005EE5F9 /* Sources */,
+				3877D5C017A1B8A2005EE5F9 /* Frameworks */,
+				3877D5C117A1B8A2005EE5F9 /* Resources */,
+				3877D5C217A1B8A2005EE5F9 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3877D5CA17A1B8A2005EE5F9 /* PBXTargetDependency */,
+			);
+			name = SuperShopperTests;
+			productName = SuperShopperTests;
+			productReference = 3877D5C417A1B8A2005EE5F9 /* SuperShopperTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3877D59017A1B8A1005EE5F9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Jim Rollenhagen";
+			};
+			buildConfigurationList = 3877D59317A1B8A1005EE5F9 /* Build configuration list for PBXProject "SuperShopper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3877D58F17A1B8A1005EE5F9;
+			productRefGroup = 3877D59917A1B8A1005EE5F9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3877D59717A1B8A1005EE5F9 /* SuperShopper */,
+				3877D5C317A1B8A2005EE5F9 /* SuperShopperTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3877D59617A1B8A1005EE5F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3877D5A617A1B8A1005EE5F9 /* InfoPlist.strings in Resources */,
+				3877D5AE17A1B8A1005EE5F9 /* Default.png in Resources */,
+				3877D5B017A1B8A1005EE5F9 /* Default@2x.png in Resources */,
+				3877D5B217A1B8A1005EE5F9 /* Default-568h@2x.png in Resources */,
+				3877D5B517A1B8A1005EE5F9 /* MainStoryboard_iPhone.storyboard in Resources */,
+				3877D5B817A1B8A1005EE5F9 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3877D5C117A1B8A2005EE5F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3877D5D017A1B8A2005EE5F9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3877D5C217A1B8A2005EE5F9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3877D59417A1B8A1005EE5F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3877D5A817A1B8A1005EE5F9 /* main.m in Sources */,
+				3877D5AC17A1B8A1005EE5F9 /* AppDelegate.m in Sources */,
+				3877D5BB17A1B8A1005EE5F9 /* MasterViewController.m in Sources */,
+				3877D5BE17A1B8A1005EE5F9 /* DetailViewController.m in Sources */,
+				3877D5DE17A1B9D8005EE5F9 /* ShopperStore.m in Sources */,
+				38A6D34F17A1D2AF00D7C59D /* NewStoreAlertViewDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3877D5BF17A1B8A2005EE5F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3877D5D317A1B8A2005EE5F9 /* SuperShopperTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3877D5CA17A1B8A2005EE5F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3877D59717A1B8A1005EE5F9 /* SuperShopper */;
+			targetProxy = 3877D5C917A1B8A2005EE5F9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3877D5A417A1B8A1005EE5F9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3877D5A517A1B8A1005EE5F9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3877D5B317A1B8A1005EE5F9 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3877D5B417A1B8A1005EE5F9 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		3877D5B617A1B8A1005EE5F9 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3877D5B717A1B8A1005EE5F9 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		3877D5CE17A1B8A2005EE5F9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3877D5CF17A1B8A2005EE5F9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3877D5D417A1B8A2005EE5F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3877D5D517A1B8A2005EE5F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3877D5D717A1B8A2005EE5F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SuperShopper/SuperShopper-Prefix.pch";
+				INFOPLIST_FILE = "SuperShopper/SuperShopper-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3877D5D817A1B8A2005EE5F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SuperShopper/SuperShopper-Prefix.pch";
+				INFOPLIST_FILE = "SuperShopper/SuperShopper-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3877D5DA17A1B8A2005EE5F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SuperShopper.app/SuperShopper";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SuperShopper/SuperShopper-Prefix.pch";
+				INFOPLIST_FILE = "SuperShopperTests/SuperShopperTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		3877D5DB17A1B8A2005EE5F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SuperShopper.app/SuperShopper";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SuperShopper/SuperShopper-Prefix.pch";
+				INFOPLIST_FILE = "SuperShopperTests/SuperShopperTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3877D59317A1B8A1005EE5F9 /* Build configuration list for PBXProject "SuperShopper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3877D5D417A1B8A2005EE5F9 /* Debug */,
+				3877D5D517A1B8A2005EE5F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3877D5D617A1B8A2005EE5F9 /* Build configuration list for PBXNativeTarget "SuperShopper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3877D5D717A1B8A2005EE5F9 /* Debug */,
+				3877D5D817A1B8A2005EE5F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3877D5D917A1B8A2005EE5F9 /* Build configuration list for PBXNativeTarget "SuperShopperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3877D5DA17A1B8A2005EE5F9 /* Debug */,
+				3877D5DB17A1B8A2005EE5F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3877D59017A1B8A1005EE5F9 /* Project object */;
+}
