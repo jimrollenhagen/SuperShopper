@@ -16,6 +16,6 @@
 
 @property (strong, nonatomic) NSObject *delegate;
 
-- (void)insertNewObject:(id)sender withName:(NSString*) name;
+- (void)insertNewObject:(id)sender withName:(NSString*) name dbRecord:(id) dbRecord insertToDropbox: (BOOL) insertToDropbox;
 
 @end

@@ -14,7 +14,6 @@
 		386A086617A29AB900C12D03 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386A086517A29AB900C12D03 /* QuartzCore.framework */; };
 		386A086817A29AC700C12D03 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 386A086717A29AC700C12D03 /* libc++.dylib */; };
 		386A086C17A2A71600C12D03 /* DropboxKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 386A086B17A2A71600C12D03 /* DropboxKeys.m */; };
-		386A086F17A2A81A00C12D03 /* DropboxKeysTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 386A086E17A2A81A00C12D03 /* DropboxKeysTemplate.m */; };
 		3877D59C17A1B8A1005EE5F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3877D59B17A1B8A1005EE5F9 /* UIKit.framework */; };
 		3877D59E17A1B8A1005EE5F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3877D59D17A1B8A1005EE5F9 /* Foundation.framework */; };
 		3877D5A017A1B8A1005EE5F9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3877D59F17A1B8A1005EE5F9 /* CoreGraphics.framework */; };
@@ -328,7 +327,6 @@
 				3877D5DE17A1B9D8005EE5F9 /* ShopperStore.m in Sources */,
 				38A6D34F17A1D2AF00D7C59D /* NewStoreAlertViewDelegate.m in Sources */,
 				386A086C17A2A71600C12D03 /* DropboxKeys.m in Sources */,
-				386A086F17A2A81A00C12D03 /* DropboxKeysTemplate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

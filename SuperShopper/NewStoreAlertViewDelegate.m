@@ -17,7 +17,7 @@
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
     NSString *text = [alertView textFieldAtIndex:0].text;
-    [self.sender insertNewObject:self withName:text];
+    [self.sender insertNewObject:self withName:text dbRecord:nil insertToDropbox:YES];
 }
 
 @end

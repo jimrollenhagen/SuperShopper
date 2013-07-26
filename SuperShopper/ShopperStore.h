@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Dropbox/Dropbox.h>
 
 @interface ShopperStore : NSObject
 
 @property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) DBRecord *record;
 
-+ (id) initWithName : (NSString*) name;
+- (id) initWithName : (NSString*) name dbRecord: (DBRecord*) dbRecord;
 
 @end

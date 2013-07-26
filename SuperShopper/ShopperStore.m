@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Jim Rollenhagen. All rights reserved.
 //
 
+#import <Dropbox/Dropbox.h>
 #import "ShopperStore.h"
 
 @interface ShopperStore() {
@@ -15,10 +16,10 @@
 
 @implementation ShopperStore
 
-+ (id) initWithName : (NSString*) name {
-    ShopperStore *store = [ShopperStore alloc];
-    store.name = name;
-    return store;
+- (id) initWithName : (NSString*) name dbRecord: (DBRecord*) dbRecord {
+    self.name = name;
+    self.record = dbRecord;
+    return self;
 }
 
 @end

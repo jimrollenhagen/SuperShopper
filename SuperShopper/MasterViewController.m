@@ -13,7 +13,10 @@
 #import "ShopperStore.h"
 
 @interface MasterViewController () {
-    NSMutableArray *_objects;
+    NSMutableArray *_stores;
+    DBAccount *account;
+    DBDatastore *dbStore;
+    DBTable *storesTbl;
 }
 
 @end
@@ -40,14 +43,52 @@
     [rightButtons addObject:addButton];
     
     // only show dropbox button if account is not yet linked
-    DBAccount *account = [[DBAccountManager sharedManager] linkedAccount];
+    if (!account) {
+        account = [[DBAccountManager sharedManager] linkedAccount];
+    }
     if (!account) {
         UIBarButtonItem *dbButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(setUpDropbox:)];
         [rightButtons addObject:dbButton];
+    } else {
+        // set up datastore and sync objects
+        if (!dbStore) {
+            dbStore = [DBDatastore openDefaultStoreForAccount:account error:nil];
+        }
+        
+        [self refreshData];
+        
+        [dbStore addObserver:self block:^() {
+            if (dbStore.status & DBDatastoreIncoming) {
+                [self refreshData];
+            }
+        }];
+        
+        [dbStore sync:nil];
     }
 
     self.navigationItem.rightBarButtonItems = rightButtons;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+}
+
+- (void)refreshData {
+    NSLog(@"updating data!");
+    if (_stores) {
+        while(_stores.count) {
+            [_stores removeObjectAtIndex:0];
+            [self.tableView deleteRowsAtIndexPaths:@[@0] withRowAnimation:UITableViewRowAnimationNone];
+        }
+    }
+    if (!storesTbl) {
+        storesTbl = [dbStore getTable:@"stores"];
+    }
+    NSArray *results = [storesTbl query:nil error:nil];
+    NSLog(@"%@", results);
+    if (results) {
+        for (NSInteger i = 0; i < results.count; i++) {
+            DBRecord *record = [results objectAtIndex: i];
+            [self insertNewObject:nil withName:record[@"name"] dbRecord:record insertToDropbox:NO];
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -62,10 +103,10 @@
 
 - (void)setUpDropbox:(id)sender {
     // sets up dropbox auth
-    DBAccount *account = [[DBAccountManager sharedManager] linkedAccount];
-    if (account) {
-        NSLog(@"App already linked");
-    } else {
+    if (!account) {
+        account = [[DBAccountManager sharedManager] linkedAccount];
+    }
+    if (!account) {
         [[DBAccountManager sharedManager] linkFromController:self];
     }
 }
@@ -77,15 +118,22 @@
     [alert show];
 }
 
-- (void)insertNewObject:(id)sender withName:(NSString*) name
+- (void)insertNewObject:(id)sender withName:(NSString*) name dbRecord: (id) dbRecord insertToDropbox:(BOOL) insertToDropbox
+// maybe refactor this to allow store.record to be nil
+// and then only insert to dropbox if it's nil
 {
-    if (!_objects) {
-        _objects = [[NSMutableArray alloc] init];
+    if (!_stores) {
+        _stores = [[NSMutableArray alloc] init];
     }
-    ShopperStore *store = [ShopperStore initWithName: name];
-    NSInteger row = _objects.count;
-    [_objects insertObject: store atIndex:row];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:0];
+    
+    if (storesTbl && !dbRecord) {
+        DBRecord *dbRecord = [storesTbl insert:@{ @"name": name }];
+        [dbStore sync:nil];
+    }
+    ShopperStore *store = [[ShopperStore alloc] initWithName: name dbRecord: dbRecord];
+
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:_stores.count inSection:0];
+    [_stores addObject: store];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
@@ -98,14 +146,14 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _objects.count;
+    return _stores.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    ShopperStore *object = _objects[indexPath.row];
+    ShopperStore *object = _stores[indexPath.row];
     cell.textLabel.text = [object name];
     return cell;
 }
@@ -119,7 +167,10 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [_objects removeObjectAtIndex:indexPath.row];
+        ShopperStore *store = [_stores objectAtIndex:indexPath.row];
+        [store.record deleteRecord];
+        [dbStore sync:nil];
+        [_stores removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
@@ -145,7 +196,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        NSDate *object = _objects[indexPath.row];
+        NSDate *object = _stores[indexPath.row];
         self.detailViewController.detailItem = object;
     }
 }
@@ -154,7 +205,7 @@
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = _objects[indexPath.row];
+        ShopperStore *object = _stores[indexPath.row];
         [[segue destinationViewController] setDetailItem:object];
     }
 }
