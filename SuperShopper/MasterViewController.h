@@ -10,11 +10,11 @@
 
 @class DetailViewController;
 
-@interface MasterViewController : UITableViewController
+@interface MasterViewController : UITableViewController <UITextFieldDelegate, UIAlertViewDelegate>
 
 @property (strong, nonatomic) DetailViewController *detailViewController;
 
-@property (strong, nonatomic) NSObject *delegate;
+@property (strong, nonatomic) UIAlertView *storeAlert;
 
 - (void)insertNewObject:(id)sender withName:(NSString*) name dbRecord:(id) dbRecord insertToDropbox: (BOOL) insertToDropbox;
 

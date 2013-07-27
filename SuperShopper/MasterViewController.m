@@ -9,7 +9,6 @@
 #import <Dropbox/Dropbox.h>
 #import "MasterViewController.h"
 #import "DetailViewController.h"
-#import "NewStoreAlertViewDelegate.h"
 #import "ShopperStore.h"
 
 @interface MasterViewController () {
@@ -97,10 +96,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (NewStoreAlertViewDelegate*)getDelegate {
-    return [[NewStoreAlertViewDelegate alloc] initWithSender:self];
-}
-
 - (void)setUpDropbox:(id)sender {
     // sets up dropbox auth
     if (!account) {
@@ -112,10 +107,10 @@
 }
 
 - (void)requestStoreName:(id)sender {
-    self.delegate = [self getDelegate];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Add a store" message:@"Enter the store name:" delegate:self.delegate cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
-    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
-    [alert show];
+    self.storeAlert = [[UIAlertView alloc] initWithTitle:@"Add a store" message:@"Enter the store name:" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+    self.storeAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [[self.storeAlert textFieldAtIndex:0] setDelegate:self];
+    [self.storeAlert show];
 }
 
 - (void)insertNewObject:(id)sender withName:(NSString*) name dbRecord: (id) dbRecord insertToDropbox:(BOOL) insertToDropbox
@@ -136,6 +131,35 @@
     [_stores addObject: store];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
+
+
+#pragma mark - UITextFieldDelegate protocol
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [self.storeAlert dismissWithClickedButtonIndex:self.storeAlert.firstOtherButtonIndex animated:YES];
+    return YES;
+}
+
+
+#pragma mark - UIAlertViewDelegate protocol
+
+- (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0) {
+        // cancelled
+        return;
+    }
+    NSString *text = [alertView textFieldAtIndex:0].text;
+    [self insertNewObject:self withName:text dbRecord:nil insertToDropbox:YES];
+}
+
+- (BOOL)alertViewShouldEnableFirstOtherButton:(UIAlertView *)alertView {
+    NSString *text = [alertView textFieldAtIndex:0].text;
+    if (!text || [text isEqualToString:@""]) {
+        return NO;
+    }
+    return YES;
+}
+
 
 #pragma mark - Table View
 

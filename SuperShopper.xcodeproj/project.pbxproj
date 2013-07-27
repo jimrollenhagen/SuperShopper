@@ -33,7 +33,6 @@
 		3877D5D017A1B8A2005EE5F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3877D5CE17A1B8A2005EE5F9 /* InfoPlist.strings */; };
 		3877D5D317A1B8A2005EE5F9 /* SuperShopperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3877D5D217A1B8A2005EE5F9 /* SuperShopperTests.m */; };
 		3877D5DE17A1B9D8005EE5F9 /* ShopperStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3877D5DD17A1B9D8005EE5F9 /* ShopperStore.m */; };
-		38A6D34F17A1D2AF00D7C59D /* NewStoreAlertViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A6D34E17A1D2AF00D7C59D /* NewStoreAlertViewDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,8 +82,6 @@
 		3877D5D217A1B8A2005EE5F9 /* SuperShopperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuperShopperTests.m; sourceTree = "<group>"; };
 		3877D5DC17A1B9D8005EE5F9 /* ShopperStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopperStore.h; sourceTree = "<group>"; };
 		3877D5DD17A1B9D8005EE5F9 /* ShopperStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopperStore.m; sourceTree = "<group>"; };
-		38A6D34D17A1D2AF00D7C59D /* NewStoreAlertViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewStoreAlertViewDelegate.h; sourceTree = "<group>"; };
-		38A6D34E17A1D2AF00D7C59D /* NewStoreAlertViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewStoreAlertViewDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,8 +159,6 @@
 				3877D5B617A1B8A1005EE5F9 /* MainStoryboard_iPad.storyboard */,
 				3877D5B917A1B8A1005EE5F9 /* MasterViewController.h */,
 				3877D5BA17A1B8A1005EE5F9 /* MasterViewController.m */,
-				38A6D34D17A1D2AF00D7C59D /* NewStoreAlertViewDelegate.h */,
-				38A6D34E17A1D2AF00D7C59D /* NewStoreAlertViewDelegate.m */,
 				3877D5BC17A1B8A1005EE5F9 /* DetailViewController.h */,
 				3877D5BD17A1B8A1005EE5F9 /* DetailViewController.m */,
 				3877D5A217A1B8A1005EE5F9 /* Supporting Files */,
@@ -325,7 +320,6 @@
 				3877D5BB17A1B8A1005EE5F9 /* MasterViewController.m in Sources */,
 				3877D5BE17A1B8A1005EE5F9 /* DetailViewController.m in Sources */,
 				3877D5DE17A1B9D8005EE5F9 /* ShopperStore.m in Sources */,
-				38A6D34F17A1D2AF00D7C59D /* NewStoreAlertViewDelegate.m in Sources */,
 				386A086C17A2A71600C12D03 /* DropboxKeys.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
