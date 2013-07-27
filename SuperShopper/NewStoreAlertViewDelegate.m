@@ -24,4 +24,12 @@
     [self.sender insertNewObject:self withName:text dbRecord:nil insertToDropbox:YES];
 }
 
+- (BOOL)alertViewShouldEnableFirstOtherButton:(UIAlertView *)alertView {
+    NSString *text = [alertView textFieldAtIndex:0].text;
+    if (!text || [text isEqualToString:@""]) {
+        return NO;
+    }
+    return YES;
+}
+
 @end
